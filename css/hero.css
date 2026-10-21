@@ -1,0 +1,61 @@
+/* css/hero.css */
+.hero-section {
+  width: 100%;
+  height: 600px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.hero-slider {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.hero-slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 1;
+}
+
+.hero-slide.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.hero-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* --- Arrows --- */
+.hero-arrow {
+  position: absolute;
+  /* Change this from 50% to 40% so it sits higher up */
+  top: 30%;
+  transform: translateY(-50%);
+  font-size: 2.5rem;
+  color: #000;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 20;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+.hero-arrow:hover {
+  background: rgba(255, 255, 255, 0.7);
+}
+.hero-arrow.left {
+  left: 20px;
+}
+.hero-arrow.right {
+  right: 20px;
+}

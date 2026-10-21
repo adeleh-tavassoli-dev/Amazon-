@@ -1,0 +1,10 @@
+/* css/variables.css */
+:root {
+  --amazon-dark-blue: #131921;
+  --amazon-sub-nav: #232f3e;
+  --amazon-orange: #febd69;
+  --amazon-orange-hover: #f3a847;
+  --amazon-text-white: #ffffff;
+  --amazon-text-grey: #cccccc;
+  --amazon-bg-grey: #eaeded;
+}

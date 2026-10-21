@@ -1,0 +1,297 @@
+/* css/header.css */
+@import url("variables.css"); /* Ensure variables load */
+
+/* --- Main Navbar --- */
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: var(--amazon-dark-blue);
+  height: 60px;
+  color: var(--amazon-text-white);
+  padding: 7px 15px;
+  min-width: 1000px; /* Prevents breaking */
+}
+
+/* 1. Logo */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  padding: 5px 8px 0 0;
+  margin-right: 15px;
+  border: 1px solid transparent;
+  height: 100%;
+  cursor: pointer;
+}
+
+.nav-logo:hover {
+  border-color: var(--amazon-text-white);
+  border-radius: 2px;
+}
+.amazon-logo-img {
+  height: 35px;
+  object-fit: contain;
+}
+
+/* 2. Location */
+.nav-address {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px 9px;
+  border: 1px solid transparent;
+  height: 100%;
+  margin-right: 15px;
+  cursor: pointer;
+}
+.nav-address:hover {
+  border-color: var(--amazon-text-white);
+  border-radius: 2px;
+}
+
+.nav-opt-1 {
+  font-size: 0.75rem;
+  color: var(--amazon-text-grey);
+  margin-left: 15px;
+}
+.nav-opt-2 {
+  font-size: 0.9rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+.nav-opt-2 i {
+  margin-right: 5px;
+  font-size: 1rem;
+}
+
+/* 3. Search Bar */
+.nav-search {
+  display: flex;
+  flex-grow: 1;
+  height: 40px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-right: 15px;
+}
+.search-dropdown {
+  background-color: #f3f3f3;
+  border: none;
+  border-right: 1px solid #cdcdcd;
+  padding: 0 10px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+.search-dropdown:hover {
+  background-color: #dadada;
+}
+.search-input {
+  flex-grow: 1;
+  border: none;
+  padding: 0 10px;
+  font-size: 1rem;
+  outline: none;
+}
+.search-button {
+  background-color: var(--amazon-orange);
+  border: none;
+  width: 45px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-button:hover {
+  background-color: var(--amazon-orange-hover);
+}
+
+/* 4,5,6. Flag & Menu Items */
+.nav-flag,
+.nav-item {
+  display: flex;
+  align-items: center; /* Flags align center */
+  padding: 5px 9px;
+  border: 1px solid transparent;
+  height: 100%;
+  cursor: pointer;
+}
+.nav-item {
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 10px;
+}
+.nav-flag:hover,
+.nav-item:hover {
+  border-color: var(--amazon-text-white);
+  border-radius: 2px;
+}
+
+.nav-flag img {
+  width: 27px;
+  margin-right: 5px;
+}
+.nav-flag span {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+/* 7. Cart */
+.nav-cart {
+  display: flex;
+  align-items: flex-end;
+  padding: 0px 9px;
+  border: 1px solid transparent;
+  height: 100%;
+  cursor: pointer;
+}
+.nav-cart:hover {
+  border-color: var(--amazon-text-white);
+  border-radius: 2px;
+}
+.cart-icon-container {
+  position: relative;
+}
+.nav-cart i {
+  font-size: 2.1rem;
+}
+.nav-cart > span {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-left: 5px;
+  margin-bottom: 3px;
+}
+.cart-count {
+  position: absolute;
+  color: var(--amazon-orange);
+  font-weight: bold;
+  font-size: 1rem;
+  top: -3px;
+  left: 19px;
+}
+
+/* --- Sub Navbar --- */
+.sub-navbar {
+  background-color: var(--amazon-sub-nav);
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  color: var(--amazon-text-white);
+}
+.menu-btn,
+.sub-link {
+  padding: 5px 8px;
+  margin-right: 15px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.menu-btn:hover,
+.sub-link:hover {
+  border-color: var(--amazon-text-white);
+}
+.menu-btn i {
+  margin-right: 5px;
+}
+
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+  display: none;
+}
+.sidebar-overlay.active {
+  display: block;
+}
+
+.sidebar-menu {
+  position: fixed;
+  top: 0;
+  left: -350px;
+  width: 350px;
+  height: 100%;
+  background: white;
+  z-index: 1000;
+  transition: left 0.3s ease;
+  overflow-y: auto;
+}
+.sidebar-menu.active {
+  left: 0;
+}
+
+.sidebar-header {
+  background: #232f3e;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  position: relative;
+}
+.sidebar-header i {
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+.close-btn {
+  position: absolute;
+  right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.sidebar-content {
+  padding: 20px;
+}
+.sidebar-content h3 {
+  font-size: 1.1rem;
+  margin: 15px 0 10px 0;
+  font-weight: bold;
+}
+.sidebar-content ul {
+  padding: 0;
+  list-style: none;
+}
+.sidebar-content li {
+  padding: 10px 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* SMOOTH TOGGLE ANIMATION */
+#expanded-departments,
+#expanded-programs {
+  display: block !important;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.8s ease;
+}
+
+#expanded-departments.open,
+#expanded-programs.open {
+  max-height: 2000px;
+}
+
+#see-less-btn,
+#see-less-btn-programs {
+  display: flex;
+}
+
+
+/* --- Section Separator Lines --- */
+.sidebar-content h3 {
+  border-bottom: 1px solid #e0e0e0; /* Light grey line */
+  padding-bottom: 12px; /* Space between text and line */
+  margin-top: 20px; /* Space above the title */
+  margin-bottom: 10px; /* Space between line and list */
+}
+
+/* Remove top margin for the very first title */
+.sidebar-content h3:first-of-type {
+  margin-top: 0;
+}

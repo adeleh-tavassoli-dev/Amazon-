@@ -1,0 +1,166 @@
+<!-- partials/header.html -->
+<header>
+  <div id="sidebar-overlay" class="sidebar-overlay"></div>
+  <div id="sidebar-menu" class="sidebar-menu">
+    <div class="sidebar-header">
+      <i class="fa-solid fa-circle-user"></i>
+      <span>Hello, sign in</span>
+      <i class="fa-solid fa-xmark close-btn" onclick="closeSidebar()"></i>
+    </div>
+    <div class="sidebar-content">
+      <h3>Digital Content & Devices</h3>
+      <ul>
+        <li>Prime Video <i class="fa-solid fa-chevron-right"></i></li>
+        <li>Amazon Music <i class="fa-solid fa-chevron-right"></i></li>
+        <li>
+          Kindle E-readers & Books <i class="fa-solid fa-chevron-right"></i>
+        </li>
+        <li>Amazon AppStore <i class="fa-solid fa-chevron-right"></i></li>
+      </ul>
+
+      <h3>Shop by Department</h3>
+      <ul id="dept-ul">
+        <li>Electronics <i class="fa-solid fa-chevron-right"></i></li>
+        <li>Computers <i class="fa-solid fa-chevron-right"></i></li>
+        <li>Smart Home <i class="fa-solid fa-chevron-right"></i></li>
+        <li>Arts & Crafts <i class="fa-solid fa-chevron-right"></i></li>
+
+        <li id="see-all-btn" style="cursor: pointer">
+          See all <i class="fa-solid fa-chevron-down"></i>
+        </li>
+
+        <li
+          id="expanded-departments"
+          style="display: none; padding: 0; flex-direction: column"
+        >
+          <ul style="padding: 0; list-style: none; width: 100%">
+            <li>Automotive <i class="fa-solid fa-chevron-right"></i></li>
+            <li>Baby <i class="fa-solid fa-chevron-right"></i></li>
+            <li>
+              Beauty and Personal Care <i class="fa-solid fa-chevron-right"></i>
+            </li>
+            <li>Women's Fashion <i class="fa-solid fa-chevron-right"></i></li>
+            <li>Men's Fashion <i class="fa-solid fa-chevron-right"></i></li>
+            <li>Girls' Fashion <i class="fa-solid fa-chevron-right"></i></li>
+            <li>Boys' Fashion <i class="fa-solid fa-chevron-right"></i></li>
+            <li>
+              Health and Household <i class="fa-solid fa-chevron-right"></i>
+            </li>
+            <li>Home and Kitchen <i class="fa-solid fa-chevron-right"></i></li>
+            <li>
+              Industrial and Scientific
+              <i class="fa-solid fa-chevron-right"></i>
+            </li>
+            <li>Luggage <i class="fa-solid fa-chevron-right"></i></li>
+            <li>
+              Movies & Television <i class="fa-solid fa-chevron-right"></i>
+            </li>
+            <li>Pet supplies <i class="fa-solid fa-chevron-right"></i></li>
+            <li>Software <i class="fa-solid fa-chevron-right"></i></li>
+            <li>
+              Sports and Outdoors <i class="fa-solid fa-chevron-right"></i>
+            </li>
+            <li>
+              Tools & Home Improvement <i class="fa-solid fa-chevron-right"></i>
+            </li>
+            <li>Toys and Games <i class="fa-solid fa-chevron-right"></i></li>
+            <li>Video Games <i class="fa-solid fa-chevron-right"></i></li>
+            <li id="see-less-btn" style="cursor: pointer; margin-top: 10px">
+              See less <i class="fa-solid fa-chevron-up"></i>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h3>Programs & features</h3>
+      <ul id="prog-ul">
+        <li>Gift Cards <i class="fa-solid fa-chevron-right"></i></li>
+        <li>Amazon Live <i class="fa-solid fa-chevron-right"></i></li>
+        <li>Shop by interest <i class="fa-solid fa-chevron-right"></i></li>
+        <li>
+          International shopping <i class="fa-solid fa-chevron-right"></i>
+        </li>
+
+        <li id="see-all-btn-programs" style="cursor: pointer">
+          See all <i class="fa-solid fa-chevron-down"></i>
+        </li>
+
+        <li
+          id="expanded-programs"
+          style="display: none; padding: 0; flex-direction: column"
+        >
+          <ul style="padding: 0; list-style: none; width: 100%">
+            <li>
+              Amazon Second Chance <i class="fa-solid fa-chevron-right"></i>
+            </li>
+            <li
+              id="see-less-btn-programs"
+              style="cursor: pointer; margin-top: 10px"
+            >
+              See less <i class="fa-solid fa-chevron-up"></i>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Rest of the navbar stays exactly the same -->
+  <nav class="navbar">
+    <a href="/index.html" class="nav-logo">
+      <img
+        src="../assets/images/logo/1715487998amazon-logo-transparent.png"
+        alt="Amazon Logo"
+        class="amazon-logo-img"
+      />
+    </a>
+    <div class="nav-address">
+      <span class="nav-opt-1">Deliver to</span>
+      <div class="nav-opt-2">
+        <i class="fa-solid fa-location-dot"></i> Germany
+      </div>
+    </div>
+    <div class="nav-search">
+      <select class="search-dropdown">
+        <option>All</option>
+      </select>
+      <input type="text" class="search-input" placeholder="Search Amazon" />
+      <button class="search-button">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </div>
+    <div class="nav-flag">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg"
+        alt="US Flag"
+      />
+      <span>EN</span>
+    </div>
+    <div class="nav-item dropdown-container">
+      <span class="nav-opt-1">Hello, sign in</span>
+      <span class="nav-opt-2">Account & Lists</span>
+    </div>
+    <div class="nav-item">
+      <span class="nav-opt-1">Returns</span>
+      <span class="nav-opt-2">& Orders</span>
+    </div>
+    <div class="nav-cart" id="cart-button">
+      <div class="cart-icon-container">
+        <span class="cart-count" id="cart-count">0</span>
+        <i class="fa-solid fa-cart-shopping"></i>
+      </div>
+      <span>Cart</span>
+    </div>
+  </nav>
+  <div class="sub-navbar">
+    <div class="menu-btn" id="menu-toggle">
+      <i class="fa-solid fa-bars"></i> All
+    </div>
+    <div class="sub-link">Today's Deals</div>
+    <div class="sub-link">Prime Video</div>
+    <div class="sub-link">Gift Cards</div>
+    <div class="sub-link">Sell</div>
+    <div class="sub-link">Customer Service</div>
+    <div class="sub-link">Registry</div>
+  </div>
+</header>
